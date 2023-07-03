@@ -1,0 +1,27 @@
+<h1>Deneme</h1>
+
+
+<h3> User Register </h3>
+
+<form [formGroup]="frm" (ngSubmit)="onSubmit(frm.value)">
+  <input type="text" placeholder="Adınız" formControlName="firstName" /> <br />
+  <div *ngIf="!firstName?.valid && (firstName?.dirty || firstName?.touched)">
+    {{firstName?.errors | json}}
+  </div>
+  <input type="text" placeholder="Sarıdağ" formControlName="lastName" /> <br />
+  <div *ngIf="!lastName?.valid && (lastName?.dirty || lastName?.touched)">
+    {{lastName?.errors | json}}
+  </div>
+  <input type="number" placeholder="Telefon No" formControlName="phoneNumber" /> <br />
+  <div *ngIf="!phoneNumber?.valid && (phoneNumber?.dirty || phoneNumber?.touched)">
+    {{phoneNumber?.errors | json}}
+  </div>
+  <div formGroupName="address">
+    <input type="text" placeholder="Ülke" formControlName="country"> <br>
+    <input type="text" placeholder="Şehir" formControlName="city"> <br>
+    <input type="text" placeholder="Address" formControlName="address"> <br>
+  </div>
+
+  <button type="submit"> Kaydet </button>
+
+</form>

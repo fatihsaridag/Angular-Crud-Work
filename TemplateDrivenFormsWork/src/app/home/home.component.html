@@ -1,0 +1,15 @@
+<h3> TemplateDrivenForms Work </h3>
+
+<form #frm="ngForm" (ngSubmit)="CreateUser(frm.value)">
+    <input type="text" name="firstName" placeholder="firstName" ngModel> <br>
+    <input type="text" name="lasrName" placeholder="lastName" ngModel> <br>
+    <input type="email" name="email" placeholder="email" ngModel> <br>
+    <input type="date" name="birthday" placeholder="birthday" ngModel> <br> <br>
+  
+    <div ngModelGroup="job"> 
+        <input type="text" name="jobName" placeholder="jobName" ngModel> <br>
+        <input type="text" name="jobCity" placeholder="jobCity" ngModel> <br>
+    </div>
+    
+    <button>Kaydet</button>
+</form>

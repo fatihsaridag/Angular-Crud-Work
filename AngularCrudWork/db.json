@@ -1,0 +1,45 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "employees": [
+    {
+      "firstName": "Fatih",
+      "lastName": "Sarıdağ",
+      "email": "fatihsaridag26@gmail.com",
+      "dob": "1999-02-06T22:00:00.000Z",
+      "gender": "male",
+      "education": "Diploma",
+      "company": "Google",
+      "experience": "2",
+      "package": "12",
+      "id": 1
+    },
+    {
+      "firstName": "Yusuf",
+      "lastName": "Sarıdağ",
+      "email": "yusuf@gmail.com",
+      "dob": "2015-02-04T22:00:00.000Z",
+      "gender": "female",
+      "education": "Matric",
+      "company": "Google",
+      "experience": "2",
+      "package": "3",
+      "id": 2
+    }
+  ]
+}
