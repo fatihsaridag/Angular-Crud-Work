@@ -1,4 +1,7 @@
 # AngularCrudWork
+![9](https://github.com/fatihsaridag/Angular-Crud-Work/assets/68101192/25f8c619-53d7-419f-81cb-b779d2c569d9)
+
+![10](https://github.com/fatihsaridag/Angular-Crud-Work/assets/68101192/554b068b-6353-4966-82bb-12cdf9b8e8cf)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
 
