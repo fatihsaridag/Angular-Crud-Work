@@ -14,7 +14,7 @@ export class EmployeeService {
   }
 
   updateEmployee(id:number , data:any) : Observable<any>{
-    return this._http.post(`http://localhost:3000/employees/${id}`,data)
+    return this._http.put(`http://localhost:3000/employees/${id}`,data)
   }
 
   getEmployeeList() : Observable<any>{
