@@ -1,0 +1,78 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "product" : [
+      {
+        "Name" : "Telefon",
+        "Price" : 20000,
+        "Description" : "Harika bir telefon"
+      },
+      {
+        "Name" : "Bilgisayar",
+        "Price" : 30000,
+        "Description" : "Harika bir telefon"
+      },
+      {
+        "Name" : "Laptop",
+        "Price" : 30000,
+        "Description" : "Harika bir telefon"
+      },
+      {
+        "Name" : "Süpürge",
+        "Price" : 30000,
+        "Description" : "Harika bir telefon"
+      },
+      {
+        "Name" : "TV",
+        "Price" : 30000,
+        "Description" : "Harika bir telefon"
+      },
+      {
+        "Name" : "Fan Soğutucu",
+        "Price" : 30000,
+        "Description" : "Harika bir telefon"
+      },
+      {
+        "Name" : "Kulaklık",
+        "Price" : 30000,
+        "Description" : "Harika bir telefon"
+      },
+      {
+        "Name" : "AirPods",
+        "Price" : 30000,
+        "Description" : "Harika bir telefon"
+      },
+      {
+        "Name" : "Klavye",
+        "Price" : 30000,
+        "Description" : "Harika bir telefon"
+      },
+      {
+        "Name" : "Mouse",
+        "Price" : 30000,
+        "Description" : "Harika bir telefon"
+      },
+      {
+        "Name" : "Monitor",
+        "Price" : 30000,
+        "Description" : "Harika bir telefon"
+      }
+  ]
+
+
+}

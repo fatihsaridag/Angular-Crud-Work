@@ -1,0 +1,32 @@
+<input type="text"  pInputText [(ngModel)]="value" />
+
+
+ <div class="slider-class">
+    <h2>
+      Table Example - Users List 
+    </h2>
+    <p-table [value]="products" [tableStyle]="{'min-width': '60rem'}"   [rowsPerPageOptions]="[10, 25, 50]"  [paginator]="true"
+    [rows]="5">
+      <ng-template pTemplate="header">
+          <tr>
+              <th pSortableColumn="Name" style="width:20%">Name <p-sortIcon field="code"></p-sortIcon></th>
+              <th pSortableColumn="Price" style="width:20%">Price <p-sortIcon field="code"></p-sortIcon></th>
+              <th pSortableColumn="Description" style="width:20%">Description <p-sortIcon field="price"></p-sortIcon></th>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-product>
+          <tr>
+              <td>{{product.Name}}</td>
+              <td>{{product.Price | currency: 'USD'}}</td>
+              <td>{{product.Description}}</td>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="paginatorleft">
+        <p-button type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>
+    </ng-template>
+    <ng-template pTemplate="paginatorright">
+        <p-button type="button" icon="pi pi-cloud" styleClass="p-button-text"></p-button>
+    </ng-template>
+  </p-table>
+  
+ </div>
