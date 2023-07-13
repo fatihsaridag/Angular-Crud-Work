@@ -8,6 +8,13 @@ import { InputTextModule } from 'primeng/inputtext';
 import { FormsModule } from '@angular/forms';
 import { TableModule } from 'primeng/table';
 import {HttpClientModule } from '@angular/common/http';
+import { CheckboxModule } from 'primeng/checkbox';
+import { RadioButtonModule } from 'primeng/radiobutton';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CardModule } from 'primeng/card';
+import { MessagesModule } from 'primeng/messages';
+import { MessageModule } from 'primeng/message';
+import { ToastModule } from 'primeng/toast';
 
 
 
@@ -23,7 +30,14 @@ import {HttpClientModule } from '@angular/common/http';
     InputTextModule,
     FormsModule,
     TableModule,
-    HttpClientModule
+    HttpClientModule,
+    CheckboxModule,
+    RadioButtonModule,
+    ReactiveFormsModule,
+    CardModule,
+    MessagesModule,
+    MessageModule,
+    ToastModule
   ],
   providers: [],
   bootstrap: [AppComponent]

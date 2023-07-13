@@ -1,32 +1,119 @@
-<input type="text"  pInputText [(ngModel)]="value" />
+<input type="text" pInputText [(ngModel)]="value" />
+
+<hr>
 
 
- <div class="slider-class">
+<div class="slider-class">
     <h2>
-      Table Example - Users List 
+        Table Example - Users List
     </h2>
-    <p-table [value]="products" [tableStyle]="{'min-width': '60rem'}"   [rowsPerPageOptions]="[10, 25, 50]"  [paginator]="true"
-    [rows]="5">
-      <ng-template pTemplate="header">
-          <tr>
-              <th pSortableColumn="Name" style="width:20%">Name <p-sortIcon field="code"></p-sortIcon></th>
-              <th pSortableColumn="Price" style="width:20%">Price <p-sortIcon field="code"></p-sortIcon></th>
-              <th pSortableColumn="Description" style="width:20%">Description <p-sortIcon field="price"></p-sortIcon></th>
-          </tr>
-      </ng-template>
-      <ng-template pTemplate="body" let-product>
-          <tr>
-              <td>{{product.Name}}</td>
-              <td>{{product.Price | currency: 'USD'}}</td>
-              <td>{{product.Description}}</td>
-          </tr>
-      </ng-template>
-      <ng-template pTemplate="paginatorleft">
-        <p-button type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>
-    </ng-template>
-    <ng-template pTemplate="paginatorright">
-        <p-button type="button" icon="pi pi-cloud" styleClass="p-button-text"></p-button>
-    </ng-template>
-  </p-table>
-  
- </div>
+    <p-table [value]="products" [tableStyle]="{'min-width': '60rem'}" [rowsPerPageOptions]="[10, 25, 50]"
+        [paginator]="true" [rows]="5">
+        <ng-template pTemplate="header">
+            <tr>
+                <th pSortableColumn="Name" style="width:20%">Name <p-sortIcon field="code"></p-sortIcon></th>
+                <th pSortableColumn="Price" style="width:20%">Price <p-sortIcon field="code"></p-sortIcon></th>
+                <th pSortableColumn="Description" style="width:20%">Description <p-sortIcon field="price"></p-sortIcon>
+                </th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+            <tr>
+                <td>{{product.Name}}</td>
+                <td>{{product.Price | currency: 'USD'}}</td>
+                <td>{{product.Description}}</td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="paginatorleft">
+            <p-button type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>
+        </ng-template>
+        <ng-template pTemplate="paginatorright">
+            <p-button type="button" icon="pi pi-cloud" styleClass="p-button-text"></p-button>
+        </ng-template>
+    </p-table>
+
+    <br>
+    <br>
+
+    <hr>
+
+
+</div>
+
+<div>
+
+    <ul>
+        <h1>Deneme</h1>
+        <li *ngFor="let fruit  of fruits;">
+            <div>{{ fruit.title}}</div>
+        </li>
+    </ul>
+
+</div>
+<hr>
+
+
+<p-card class="user-form flex justify-content-center">
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <h1>Employee Form</h1>
+        <div class="p-inputgroup">
+            <input type="text" pInputText placeholder="EmployeeFirstName" formControlName="EmployeeFirstName" /> <br>
+            <small class="p-error block" *ngIf="userForm.get('EmployeeFirstName')?.invalid && userForm.get('EmployeeFirstName')?.dirty">FirstName is required</small>
+        </div>
+        <div class="p-inputgroup">
+
+            <input type="text" pInputText placeholder="EmployeeLastName" formControlName="EmployeeLastName" />
+        </div>
+        <div class="p-inputgroup">
+
+            <input type="text" pInputText placeholder="EmployeeJob" formControlName="EmployeeJob" />
+        </div>
+
+        <div>
+            <div class="p-inputgroup">
+                <input type="text" pInputText placeholder="street" formControlName="street" />
+            </div>
+            <div class="p-inputgroup">
+                <input type="number" pInputText placeholder="postCode" formControlName="postCode" />
+            </div>
+        </div>
+        <br>
+        <button pButton pRipple label="Submit" class="p-button-success"></button>
+    </form>
+</p-card>
+
+
+<br><br>
+
+
+<p-messages [enableService]="true" ></p-messages>
+
+
+<button type="submit" pButton (click)="addMessages()" label="show" class="mr-2">Save</button>
+<button type="submit" pButton (click)="clearMessages()" label="show" class="mr-2">Delete</button>
+
+
+<hr>
+
+<p-message severity="info" text="Lütfen hakkımızda kısmından bize ulaşın"></p-message> 
+<p-message severity="success" text="Bize ulaştığınız için teşekkürler."></p-message>
+<p-message severity="warn" text="Çok dikkatli olmalısınız."></p-message>
+<p-message severity="error" text="Çok tehlikeli durum"></p-message>
+
+<hr>
+
+
+<p-toast position="bottom-left"></p-toast>
+
+<button type="submit" pButton (click)="showToastr()" label="Success" class="mr-2">Toaster success</button>
+<button type="submit" pButton (click)="showInfo()" label="Info" class="mr-2">Toaster info</button>
+<button type="submit" pButton (click)="showWarn()" label="Warn" class="mr-2">Toaster warn</button>
+<button type="submit" pButton (click)="showError()" label="Error" class="mr-2">Toaster error</button>
+
+
+<hr>
+
+
+
+
+
