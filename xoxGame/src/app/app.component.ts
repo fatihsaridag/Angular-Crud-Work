@@ -28,6 +28,7 @@ export class AppComponent {
   games: any = [];
   moves: any = [];
   gameOver: boolean = false;
+  isMoveFinish : boolean  = false;
   // xoxItem değerini başlangıçta belirlemek isterseniz constructor içinde atayabilirsiniz.
   constructor() {
     this.xoxItem = xoxItems.X; // Varsayılan değer
@@ -111,8 +112,12 @@ export class AppComponent {
       this.message = `Sıradaki :  ${this.mark}`;
       this.moves.push([...this.games]);
       this.isGameOver();
+      this.checkGameMoveIsOver();
       if(this.gameOver){
         this.message = `Oyun Bitti Kazanan : ${this.mark}`;
+      }
+      else if(this.isMoveFinish){
+          this.message = `Oyun bitti berabere`;
       }
       else{
         if (this.mark == "X")
@@ -142,6 +147,7 @@ export class AppComponent {
     ];
 
     this.gameOver = false;
+    this.isMoveFinish = false;
     this.moves = [];
   }
 
@@ -216,7 +222,23 @@ export class AppComponent {
   }
 
   returnSelectMove(index: number) {
+
     this.games = this.moves[index];
+
   }
+
+
+  checkGameMoveIsOver(){
+    this.isMoveFinish = true;
+
+    for (let i = 0; i < this.games.length; i++) {
+        if(this.games[i].mark == ""){
+          this.isMoveFinish = false;
+          break;
+        }
+    }
+  }
+
+
 
 }
