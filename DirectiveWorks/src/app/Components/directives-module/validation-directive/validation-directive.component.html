@@ -1,0 +1,14 @@
+<h1>VALIDATION DIRECTIVE</h1>
+
+
+<div class="container">
+    <form>
+        <input #name [appValid]="name.validity.valid" required minlength="3" maxlength="10">
+        <div class="invalid-feedback">
+            Zorunlu Alan
+        </div>
+    </form>
+    
+</div>
+
+
